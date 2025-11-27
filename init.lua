@@ -1,23 +1,17 @@
--- Setup Lazy.nvim ------------------------------------------------------------
+-- Basic options
+require("config.options")
 
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable",
-    lazypath,
-  })
-end
-vim.opt.rtp:prepend(lazypath)
+-- Keymaps
+require("config.keymaps")
 
--- Plugins --------------------------------------------------------------------
-
-
-local opts = {}
-
-require("vim-options")
-require("lazy").setup("plugins")
-
+-- Lazy.nvim plugin manager bootstrap
+require("config.lazy")
+require("lualine").setup()
+require("gitsigns").setup()
+require("Comment").setup()
+-- Theme
+require("config.theme")
+-- LSP setup
+require("config.lsp")
+require("config.tree")
+require("config.bufferline")

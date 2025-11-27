@@ -1,0 +1,5 @@
+require("lualine").setup()
+require("gitsigns").setup()
+require("Comment").setup()
+require("indent_blankline").setup()
+require("toggleterm").setup()
