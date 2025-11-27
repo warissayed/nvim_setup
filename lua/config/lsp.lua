@@ -11,6 +11,7 @@ require("mason-lspconfig").setup({
     "html",
     "cssls",
     "jsonls",
+    "tailwindcss",
     -- Python
     "pyright",
     -- Go
@@ -58,6 +59,7 @@ local servers = {
   "html",
   "cssls",
   "jsonls",
+  "tailwindcss",
   "pyright",
   "gopls",
   "rust_analyzer",
